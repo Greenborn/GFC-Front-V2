@@ -21,7 +21,7 @@ import AppMenu   from './AppMenu.vue'
 import Spinner   from './Spinner.vue'
 import ModalsManager   from './ModalsManager.vue'
 
-import { AppStore } from "../../stores/app";
+import { AppStore } from "../stores/app";
 
 const storeApp = AppStore()
 

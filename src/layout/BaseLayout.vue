@@ -6,7 +6,7 @@
 
 <script setup>
   import Spinner   from './Spinner.vue'
-  import { AppStore } from "../../stores/app";
+  import { AppStore } from "../stores/app";
   import ModalsManager   from './ModalsManager.vue'
   
   const storeApp = AppStore()

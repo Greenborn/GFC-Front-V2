@@ -11,7 +11,7 @@
 
 <script setup >
   import { ref }      from "vue"
-  import { AppStore } from "../../stores/app"
+  import { AppStore } from "../stores/app"
 
   const storeApp = AppStore()
 </script>

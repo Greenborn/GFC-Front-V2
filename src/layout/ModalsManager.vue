@@ -11,7 +11,7 @@
 <script setup>
   import { ref, onMounted, onBeforeMount } from 'vue';
 
-  import { AppStore } from "../../stores/app";
+  import { AppStore } from "../stores/app";
   
   const storeApp = AppStore()
 

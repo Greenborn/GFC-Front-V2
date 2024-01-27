@@ -4,7 +4,7 @@
     <div class="w-100">
       <div class="row justify-content-center">
         <div class="col-auto mt-3 mb-5">
-          <div class="cont-img-header"><img src="/images/agcprofile.svg" /></div>
+          <div class="cont-img-header"></div>
         </div>
       </div>
 
@@ -71,7 +71,7 @@
 
 <script setup>
   import { ref }      from "vue"
-  import { AppStore } from "../../stores/app";
+  import { AppStore } from "../stores/app";
   import { useRouter } from 'vue-router'
 
   const storeApp = AppStore();
@@ -108,7 +108,6 @@
 </script>
 
 <style  lang="scss" scoped>
-@import "../../assets/styles/_variables";
 
 .menu-cont{
   width:      20rem;
