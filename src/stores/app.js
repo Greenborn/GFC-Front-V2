@@ -13,7 +13,7 @@ export const AppStore = defineStore('app',() =>  {
   const tipoUsuario    = ref('')
   const opcionesMenu   = ref([])
   const sidebarVisible = ref(false)
-  const ruta_actual    = ref({})
+  const ruta_actual    = ref({ "path": "/home" })
   const ultimo_cod_modal = ref(0)
 
   const modals_ = ref(null)
@@ -34,6 +34,10 @@ export const AppStore = defineStore('app',() =>  {
         this.modals_.push(n_m)
       }
     }
+  }
+
+  const get_context = function(){
+    return 'logedout'
   }
 
   function modals_ordenados(){
@@ -137,6 +141,6 @@ export const AppStore = defineStore('app',() =>  {
 
   return {
     userInfo, sidebarVisible, rutas, opcionesMenu, tipoUsuario, ruta_actual, toggle_sidebar, ultimo_cod_modal,
-    modals_, mostrar_modal, ocultar_modal, loading, mostrar_alerta, mostrar_confirm, inic_modals
+    modals_, mostrar_modal, ocultar_modal, loading, get_context, mostrar_alerta, mostrar_confirm, inic_modals
   }
 })

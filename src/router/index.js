@@ -3,8 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Layout     from '../layout/Layout.vue'
 import BaseLayout from '../layout/BaseLayout.vue'
 
+import PaginaRegistro from '../views/usuarios/PaginaRegistro.vue'
+import PaginaLogin from '../views/usuarios/PaginaLogin.vue'
 import HomePage from '../views/HomePage.vue'
-
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,19 +13,16 @@ const router = createRouter({
     {
       path: "/",
       name: 'root',
-      redirect: 'dashboard',
-      component: Layout,
-      children: []
+      redirect: 'home',
     },
     {
-      path: "/dashboard",
+      path: "/",
       name: "dashboard",
       component: BaseLayout,
       children: [
-        {
-          path:  "/dashboard",
-          component: HomePage,
-        }
+        { path:  "/login",    component: PaginaLogin    },
+        { path:  "/register", component: PaginaRegistro },
+        { path:  "/home",     component: HomePage }
       ]
     }
   ]

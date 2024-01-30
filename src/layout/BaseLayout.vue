@@ -1,6 +1,8 @@
 <template>
   <AppTopbar></AppTopbar>
-  <router-view></router-view>
+  <div class="container-fluid">
+    <router-view ></router-view>
+  </div>
   <ModalsManager></ModalsManager>
   <Spinner :loading="storeApp.loading"></Spinner>
 </template>
