@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Layout from '../layout/Layout.vue'
+import Layout     from '../layout/Layout.vue'
+import BaseLayout from '../layout/BaseLayout.vue'
+
 import HomePage from '../views/HomePage.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,7 +19,13 @@ const router = createRouter({
     {
       path: "/dashboard",
       name: "dashboard",
-      component: HomePage,
+      component: BaseLayout,
+      children: [
+        {
+          path:  "/dashboard",
+          component: HomePage,
+        }
+      ]
     }
   ]
 })
